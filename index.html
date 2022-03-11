@@ -21,11 +21,12 @@
         <div class="topbar">
           <!-- Brand -->
           <div class="brand">
-            <img
-              class="logo"
-              src="./img/logo-sneak.png"
-              alt="SNEAK - Creativo Portfolio"
-            />
+            <a href="">
+              <img
+                class="logo"
+                src="./img/logo-sneak.png"
+                alt="SNEAK - Creativo Portfolio"
+            /></a>
           </div>
           <nav class="menu">
             <!-- Navbar -->
@@ -87,6 +88,21 @@
           >
             <i class="fa-solid fa-bars"></i>
           </button>
+          <!-- Script toggleSidebarNav -->
+          <script>
+            function toggleSidebarNav() {
+              var showSidebarNav = document.getElementById("Sidenav");
+              if (showSidebarNav.style.right === "-100vw") {
+                showSidebarNav.style.right = "0";
+                showSidebarNav.style.transition = "all 0.5s ease 0s";
+                console.log("OPEN");
+              } else {
+                showSidebarNav.style.right = "-100vw";
+                showSidebarNav.style.transition = "all 0.5s ease 0s";
+                console.log("CLOSE");
+              }
+            }
+          </script>
         </div>
       </div>
     </header>
@@ -130,27 +146,47 @@
         <div class="social">
           <ul class="items-social">
             <li class="item-social">
-              <a class="link-social" href="">
+              <a
+                class="link-social"
+                href="https://titamedia.com/"
+                target="_blank"
+              >
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
             </li>
             <li class="item-social">
-              <a class="link-social" href="">
+              <a
+                class="link-social"
+                href="https://titamedia.com/"
+                target="_blank"
+              >
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li>
             <li class="item-social">
-              <a class="link-social" href="">
+              <a
+                class="link-social"
+                href="https://titamedia.com/"
+                target="_blank"
+              >
                 <i class="fa-brands fa-dribbble"></i>
               </a>
             </li>
             <li class="item-social">
-              <a class="link-social" href="">
+              <a
+                class="link-social"
+                href="https://titamedia.com/"
+                target="_blank"
+              >
                 <i class="fa-brands fa-google-plus-g"></i>
               </a>
             </li>
             <li class="item-social">
-              <a class="link-social" href="">
+              <a
+                class="link-social"
+                href="https://titamedia.com/"
+                target="_blank"
+              >
                 <i class="fa-brands fa-youtube"></i>
               </a>
             </li>
@@ -158,19 +194,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      function toggleSidebarNav() {
-        var showSidebarNav = document.getElementById("Sidenav");
-        if (showSidebarNav.style.right === "-100vw") {
-          showSidebarNav.style.right = "0";
-          showSidebarNav.style.transition = "all 0.5s ease 0s";
-          console.log("OPEN");
-        } else {
-          showSidebarNav.style.right = "-100vw";
-          showSidebarNav.style.transition = "all 0.5s ease 0s";
-          console.log("CLOSE");
-        }
-      }
-    </script>
   </body>
 </html>

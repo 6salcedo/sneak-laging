@@ -56,10 +56,13 @@
     align-items: center;
     gap: 2rem;
     & .nav-item {
+      position: relative;
+      margin-bottom: 1rem;
       & .nav-link {
         text-decoration: none;
         color: $white;
         position: relative;
+        padding: 1rem;
         &::after {
           content: "";
           height: 2px;
@@ -69,7 +72,7 @@
           position: absolute;
           left: 0;
           right: 0;
-          bottom: -5px;
+          bottom: 0.5rem;
           transform: scale(0);
           transition: all 0.5s ease 0s;
         }
