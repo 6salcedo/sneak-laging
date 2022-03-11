@@ -1,0 +1,24 @@
+// Globals
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+@include media(desktop) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0;
+    width: calc(100% - 2rem);
+  }
+}

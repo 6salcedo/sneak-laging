@@ -1,0 +1,18 @@
+.main-banner {
+  @include bg-color($pink-2);
+  text-align: $text-center;
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .title-banner {
+    letter-spacing: 0.5rem;
+  }
+  & .description-banner {
+    letter-spacing: 0.1rem;
+  }
+  & [class*="btn"] {
+    letter-spacing: 0.1rem;
+  }
+}

@@ -1,0 +1,26 @@
+footer {
+  color: $gray-2;
+  padding: 2rem 0;
+  & .copyright {
+    padding: 1rem 0;
+  }
+  & .social {
+    margin: 1rem 0;
+    & .items-social {
+      list-style: none;
+      display: inline-flex;
+      padding: 0;
+      & .item-social {
+        margin: 0 0.5rem;
+        & .link-social {
+          color: $gray-2;
+          transition: all 0.3s ease 0s;
+          &:hover {
+            color: $pink-2;
+            transition: all 0.3s ease 0s;
+          }
+        }
+      }
+    }
+  }
+}

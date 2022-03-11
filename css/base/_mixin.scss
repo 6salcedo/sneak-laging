@@ -1,0 +1,47 @@
+/* Background Color */
+@mixin bg-color($color) {
+  background-color: $color;
+}
+/* Font Color */
+@mixin font-color($color) {
+  color: $color;
+}
+
+// Font Color
+.font-white {
+  color: $white;
+}
+.font-pink {
+  color: $pink-1;
+}
+
+// Font Styles
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+//Text Align
+.text-center {
+  text-align: center;
+}
+
+/* Media queries */
+@mixin media($media) {
+  @if $media == phone {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $media == notebook {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $media == desktop {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+}

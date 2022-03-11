@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "mainBanner.module.scss"
+    ],
+    "names": [],
+    "file": "mainBanner.module.css"
+}

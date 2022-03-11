@@ -1,0 +1,42 @@
+// Base
+@import "./base/variables";
+@import "./base/mixin";
+// Templates
+@import "./templates/header";
+@import "./templates/nabvar";
+@import "./templates/footer";
+// Layouts
+@import "./layouts/layout";
+// Elements
+@import "./elements/buttons";
+// Modules
+@import "./modules/mainBanner.module.scss";
+// Font Montserrat
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Globals Styles
+body {
+  @include bg-color($white);
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+::selection {
+  background-color: $pink-1;
+  color: $white;
+}
+// Scroll Style
+::-webkit-scrollbar-track {
+  background-color: $gray-3;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 7px;
+  background: $gray-1;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: $gray-3;
+}

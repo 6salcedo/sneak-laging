@@ -1,0 +1,21 @@
+// Style Head
+Header {
+  @include bg-color($white);
+  position: absolute;
+  width: 100%;
+  & .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    & .brand {
+      display: flex;
+      max-width: 200px;
+      max-height: 60px;
+      margin: 10px 0;
+      & .logo {
+        max-width: 100%;
+      }
+    }
+  }
+}
