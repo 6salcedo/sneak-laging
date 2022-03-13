@@ -29,11 +29,11 @@ Header .topbar {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 60px;
 }
 
@@ -55,8 +55,8 @@ Header .topbar .brand .logo {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu .navbar {
@@ -65,8 +65,8 @@ Header .topbar .brand .logo {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   list-style: none;
   gap: 20px;
 }
@@ -80,8 +80,7 @@ Header .topbar .brand .logo {
   cursor: pointer;
 }
 
-.menu .navbar .nav-item .nav-link.active,
-.menu .navbar .nav-item .nav-link:hover {
+.menu .navbar .nav-item .nav-link.active, .menu .navbar .nav-item .nav-link:hover {
   background-color: #fc758c;
   color: #fff;
   -webkit-transition: all 0.3s ease 0s;
@@ -122,16 +121,16 @@ Header .topbar .brand .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2rem;
 }
 
@@ -158,14 +157,14 @@ Header .topbar .brand .logo {
   right: 0;
   bottom: 0.5rem;
   -webkit-transform: scale(0);
-  transform: scale(0);
+          transform: scale(0);
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
 
 .sidenav .navbar .nav-item .nav-link:hover::after {
   -webkit-transform: scale(1);
-  transform: scale(1);
+          transform: scale(1);
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
@@ -202,11 +201,11 @@ Header .topbar .brand .logo {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .togglenav {
     display: block !important;
@@ -263,8 +262,8 @@ footer .social .items-social .item-social .link-social:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .column {
@@ -294,8 +293,7 @@ footer .social .items-social .item-social .link-social:hover {
   cursor: pointer;
 }
 
-.btn:hover,
-.btn.btn-banner:hover {
+.btn:hover, .btn.btn-banner:hover {
   background-color: #707070;
   color: #fff;
   -webkit-transition: all 0.3s ease 0s;
@@ -329,11 +327,11 @@ footer .social .items-social .item-social .link-social:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-banner .title-banner {
@@ -346,6 +344,283 @@ footer .social .items-social .item-social .link-social:hover {
 
 .main-banner [class*="btn"] {
   letter-spacing: 0.1rem;
+}
+
+.tabs-nav {
+  list-style: none;
+  margin: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.tabs-nav .tab-item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.tabs-nav .tab-item .tab-link {
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  text-decoration: none;
+  color: #707070;
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.tabs-nav .tab-item .tab-link.active {
+  background-color: #ff5672;
+  color: #fff;
+}
+
+.tabs-nav .tab-item .tab-link:hover {
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  background-color: #ff5672;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .tabs-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.filter-porfolio.grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.grid .link-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  position: relative;
+  border: 7px solid #f6f6f6;
+  overflow: hidden;
+}
+
+.filter-porfolio.grid .link-project:hover .card-portfolio {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.grid .link-project .card-portfolio {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fc758c;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.grid .link-project .card-portfolio h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.filter-porfolio.grid .link-project .card-portfolio p {
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  margin: 0;
+}
+
+.filter-porfolio.grid .link-project .card-portfolio hr {
+  width: 70%;
+  background-color: #fff;
+  border: 0;
+  height: 1px;
+}
+
+.filter-porfolio.grid .link-project .img-project {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  max-width: 700px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.filter-porfolio.list .link-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  height: 200px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  border: 0.5rem solid #f6f6f6;
+  background-color: #f6f6f6;
+}
+
+.filter-porfolio.list .link-project .img-project {
+  width: 40%;
+  max-width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.filter-porfolio.list .link-project .card-portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-porfolio.list .link-project .card-portfolio h3,
+.filter-porfolio.list .link-project .card-portfolio p {
+  z-index: 1;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.list .link-project .card-portfolio hr {
+  width: 80%;
+  z-index: 1;
+  height: 1px;
+  border: 0;
+  background-color: #000;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.list .link-project .card-portfolio::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-color: #fc758c;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.list .link-project:hover .card-portfolio h3,
+.filter-porfolio.list .link-project:hover .card-portfolio p {
+  color: #fff;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.list .link-project:hover .card-portfolio hr {
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.filter-porfolio.list .link-project:hover .card-portfolio::after {
+  width: 100%;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.style-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.style-list a {
+  color: #ff5672;
+  cursor: pointer;
 }
 
 body {

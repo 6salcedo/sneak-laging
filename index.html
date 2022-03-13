@@ -29,7 +29,7 @@
             /></a>
           </div>
           <nav class="menu">
-            <!-- Navbar -->
+            <!-- Menu Desktop -->
             <ul class="navbar">
               <li class="nav-item">
                 <a class="nav-link active" href="">All</a>
@@ -54,7 +54,9 @@
               </a>
             </div>
           </nav>
+          <!-- Navbar Mobile -->
           <nav id="Sidenav" class="sidenav" style="right: -100vw">
+            <!-- Menu Mobile -->
             <ul class="navbar">
               <li class="nav-item">
                 <a class="nav-link active" href="">All</a>
@@ -72,6 +74,7 @@
                 <a class="nav-link" href="">App</a>
               </li>
             </ul>
+            <!-- Close Menu mobile -->
             <button
               href="javascript:void(0);"
               class="close-nav"
@@ -80,7 +83,7 @@
               <i class="fa-solid fa-xmark"></i>
             </button>
           </nav>
-          <!-- Navbar Mobile -->
+          <!-- Open Menu Mobile -->
           <button
             href="javascript:void(0);"
             class="btn togglenav"
@@ -131,10 +134,46 @@
       <!-- Portfolio -->
       <div class="portfolio">
         <div class="container">
-          <div class="tabs-portfolio"></div>
+          <div class="tabs-portfolio">
+            <div class="style-list">
+              <a onclick="projectsGrid()"><i class="fa-solid fa-grip"></i></a>
+              <a onclick="projectsList()"
+                ><i class="fa-solid fa-grip-lines"></i
+              ></a>
+            </div>
+            <ul class="tabs-nav grid">
+              <li class="tab-item">
+                <a id="All" class="tab-link" onclick="allProjects()">All</a>
+              </li>
+              <li class="tab-item">
+                <a id="Branding" class="tab-link" onclick="brandingProjects()"
+                  >Branding</a
+                >
+              </li>
+              <li class="tab-item">
+                <a id="Web" class="tab-link" onclick="webProjects()">Web</a>
+              </li>
+              <li class="tab-item">
+                <a
+                  id="Photography"
+                  class="tab-link"
+                  onclick="photographyProjects()"
+                  >Photography</a
+                >
+              </li>
+              <li class="tab-item">
+                <a id="App" class="tab-link" onclick="appProjects()">App</a>
+              </li>
+            </ul>
+          </div>
+          <div class="content-portfolio">
+            <div id="Projects" class="filter-porfolio grid"></div>
+          </div>
         </div>
+        <!-- Script Filter Portfolio -->
+        <script src="./data/portfolio.json"></script>
+        <script src="./js/portfolio.js"></script>
       </div>
-      <div class="container"></div>
     </main>
     <!-- Footer -->
     <footer class="text-center">
