@@ -32,19 +32,19 @@
             <!-- Menu Desktop -->
             <ul class="navbar">
               <li class="nav-item">
-                <a class="nav-link active" href="">All</a>
+                <a class="nav-link active" href="#Portfolio">All</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Branding</a>
+                <a class="nav-link" href="#Portfolio">Branding</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Web</a>
+                <a class="nav-link" href="#Portfolio">Web</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Photography</a>
+                <a class="nav-link" href="#Portfolio">Photography</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">App</a>
+                <a class="nav-link" href="#Portfolio">App</a>
               </li>
             </ul>
             <!-- Search -->
@@ -59,19 +59,19 @@
             <!-- Menu Mobile -->
             <ul class="navbar">
               <li class="nav-item">
-                <a class="nav-link active" href="">All</a>
+                <a class="nav-link active" href="#Portfolio">All</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Branding</a>
+                <a class="nav-link" href="#Portfolio">Branding</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Web</a>
+                <a class="nav-link" href="#Portfolio">Web</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Photography</a>
+                <a class="nav-link" href="#Portfolio">Photography</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">App</a>
+                <a class="nav-link" href="#Portfolio">App</a>
               </li>
             </ul>
             <!-- Close Menu mobile -->
@@ -123,7 +123,9 @@
                   Magna mundi referrentur quo, no rebum dignissim qui.<br />
                   Per quodsi accusata id, agam labores.
                 </p>
-                <a class="btn btn-banner text-uppercase" href="#"
+                <a
+                  class="btn btn-banner text-uppercase nav-link"
+                  href="#Portfolio"
                   >View our work</a
                 >
               </div>
@@ -132,7 +134,7 @@
         </div>
       </div>
       <!-- Portfolio -->
-      <div class="portfolio">
+      <div id="Portfolio" class="portfolio">
         <div class="container">
           <div class="tabs-portfolio">
             <div class="style-list">
@@ -233,5 +235,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      const links = document.querySelectorAll("a.nav-link");
+
+      for (const link of links) {
+        link.addEventListener("click", clickHandler);
+      }
+
+      function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+
+        document.querySelector(href).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
   </body>
 </html>
