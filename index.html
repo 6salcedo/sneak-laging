@@ -98,11 +98,11 @@
               if (showSidebarNav.style.right === "-100vw") {
                 showSidebarNav.style.right = "0";
                 showSidebarNav.style.transition = "all 0.5s ease 0s";
-                console.log("OPEN");
+                //console.log("OPEN");
               } else {
                 showSidebarNav.style.right = "-100vw";
                 showSidebarNav.style.transition = "all 0.5s ease 0s";
-                console.log("CLOSE");
+                //console.log("CLOSE");
               }
             }
           </script>
@@ -170,6 +170,9 @@
           </div>
           <div class="content-portfolio">
             <div id="Projects" class="filter-porfolio grid"></div>
+            <a id="loadmore" class="btn btn-portfolio text-uppercase"
+              >Cargar más</a
+            >
           </div>
         </div>
         <!-- Script Filter Portfolio -->
@@ -235,6 +238,7 @@
         </div>
       </div>
     </footer>
+    <!-- scrollIntoView -->
     <script>
       const links = document.querySelectorAll("a.nav-link");
 
@@ -249,7 +253,33 @@
         document.querySelector(href).scrollIntoView({
           behavior: "smooth",
         });
+        var showSidebarNav = document.getElementById("Sidenav");
+        if (showSidebarNav.style.right === "-100vw") {
+          showSidebarNav.style.right = "0";
+          showSidebarNav.style.transition = "all 0.5s ease 0s";
+        } else {
+          showSidebarNav.style.right = "-100vw";
+          showSidebarNav.style.transition = "all 0.5s ease 0s";
+        }
       }
+    </script>
+    <!-- Load More Porjects -->
+    <script>
+      const loadmore = document.querySelector("#loadmore");
+      let currentItems = 4;
+      loadmore.addEventListener("click", (e) => {
+        const elementList = [...document.querySelectorAll(".link-project")];
+        for (let i = currentItems; i < currentItems + 4; i++) {
+          if (elementList[i]) {
+            elementList[i].style.display = "flex";
+          }
+        }
+        currentItems += 4;
+        if (currentItems >= elementList.length) {
+          event.target.style.display = "none";
+          currentItems = 0;
+        }
+      });
     </script>
   </body>
 </html>

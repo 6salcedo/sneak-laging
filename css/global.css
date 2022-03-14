@@ -318,6 +318,11 @@ footer .social .items-social .item-social .link-social:hover {
   color: #fc758c;
 }
 
+.btn.btn-portfolio {
+  margin: 2rem auto;
+  display: table;
+}
+
 .main-banner {
   background-color: #fc758c;
   text-align: center;
@@ -416,9 +421,6 @@ footer .social .items-social .item-social .link-social:hover {
 }
 
 .filter-porfolio.grid .link-project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -430,6 +432,13 @@ footer .social .items-social .item-social .link-social:hover {
   position: relative;
   border: 7px solid #f6f6f6;
   overflow: hidden;
+  display: none;
+}
+
+.filter-porfolio.grid .link-project:nth-child(1), .filter-porfolio.grid .link-project:nth-child(2), .filter-porfolio.grid .link-project:nth-child(3), .filter-porfolio.grid .link-project:nth-child(4), .filter-porfolio.grid .link-project:nth-child(5), .filter-porfolio.grid .link-project:nth-child(6), .filter-porfolio.grid .link-project:nth-child(7), .filter-porfolio.grid .link-project:nth-child(8) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .filter-porfolio.grid .link-project:hover .card-portfolio {
@@ -512,9 +521,6 @@ footer .social .items-social .item-social .link-social:hover {
 }
 
 .filter-porfolio.list .link-project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 15px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -529,6 +535,13 @@ footer .social .items-social .item-social .link-social:hover {
   width: 100%;
   border: 0.5rem solid #f6f6f6;
   background-color: #f6f6f6;
+  display: none;
+}
+
+.filter-porfolio.list .link-project:nth-child(1), .filter-porfolio.list .link-project:nth-child(2), .filter-porfolio.list .link-project:nth-child(3), .filter-porfolio.list .link-project:nth-child(4) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .filter-porfolio.list .link-project .img-project {

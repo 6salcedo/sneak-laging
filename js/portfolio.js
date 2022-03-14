@@ -6,7 +6,7 @@ function allProjects() {
   var projectList = "";
   for (var i = 0; i < portfolio.length; i++) {
     projectList +=
-      "<a class='link-project'><div class='card-portfolio'><h3>" +
+      "<a id='myBtn' class='link-project'><div class='card-portfolio'><h3>" +
       portfolio[i].project +
       "</h3><hr/><p>" +
       portfolio[i].category +
@@ -20,6 +20,8 @@ function allProjects() {
   document.getElementById("Web").className = "tab-link";
   document.getElementById("Photography").className = "tab-link";
   document.getElementById("App").className = "tab-link";
+  const loadmore = document.querySelector("#loadmore");
+  loadmore.style.display = "table";
 }
 // Filter by Branding
 function brandingProjects() {
@@ -43,6 +45,8 @@ function brandingProjects() {
   document.getElementById("Web").className = "tab-link";
   document.getElementById("Photography").className = "tab-link";
   document.getElementById("App").className = "tab-link";
+  const loadmore = document.querySelector("#loadmore");
+  loadmore.style.display = "table";
 }
 // Filter by Web
 function webProjects() {
@@ -66,6 +70,8 @@ function webProjects() {
   document.getElementById("Web").className = "tab-link active";
   document.getElementById("Photography").className = "tab-link";
   document.getElementById("App").className = "tab-link";
+  const loadmore = document.querySelector("#loadmore");
+  loadmore.style.display = "table";
 }
 // Filter by Photography
 function photographyProjects() {
@@ -90,6 +96,8 @@ function photographyProjects() {
   document.getElementById("Photography").className =
     "tab-link active";
   document.getElementById("App").className = "tab-link";
+  const loadmore = document.querySelector("#loadmore");
+  loadmore.style.display = "table";
 }
 // Filter by App
 function appProjects() {
@@ -113,11 +121,14 @@ function appProjects() {
   document.getElementById("Web").className = "tab-link";
   document.getElementById("Photography").className = "tab-link";
   document.getElementById("App").className = "tab-link active";
+  const loadmore = document.querySelector("#loadmore");
+  loadmore.style.display = "table";
 }
-
+// Filter Portfolio for List
 function projectsList() {
     document.getElementById("Projects").className = "filter-porfolio list";
 }
+// Filter Portfolio for Grid
 function projectsGrid() {
     document.getElementById("Projects").className = "filter-porfolio grid";
 }
