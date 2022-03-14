@@ -409,24 +409,14 @@ footer .social .items-social .item-social .link-social:hover {
 }
 
 .filter-porfolio.grid {
-  display: -ms-grid;
-  display: grid;
   grid-gap: 10px;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 200px;
-  grid-auto-flow: dense;
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+  -webkit-columns: 3;
+          columns: 3;
 }
 
 .filter-porfolio.grid .link-project {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   position: relative;
@@ -436,9 +426,7 @@ footer .social .items-social .item-social .link-social:hover {
 }
 
 .filter-porfolio.grid .link-project:nth-child(1), .filter-porfolio.grid .link-project:nth-child(2), .filter-porfolio.grid .link-project:nth-child(3), .filter-porfolio.grid .link-project:nth-child(4), .filter-porfolio.grid .link-project:nth-child(5), .filter-porfolio.grid .link-project:nth-child(6), .filter-porfolio.grid .link-project:nth-child(7), .filter-porfolio.grid .link-project:nth-child(8) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 .filter-porfolio.grid .link-project:hover .card-portfolio {
@@ -634,6 +622,13 @@ footer .social .items-social .item-social .link-social:hover {
 .style-list a {
   color: #ff5672;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .filter-porfolio.grid {
+    -webkit-columns: 2;
+            columns: 2;
+  }
 }
 
 html {

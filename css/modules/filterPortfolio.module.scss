@@ -1,14 +1,9 @@
 .filter-porfolio {
   &.grid {
-    display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 200px;
-    grid-auto-flow: dense;
     transition: all 0.5s ease 0s;
+    columns: 3;
     & .link-project {
-      justify-content: center;
-      align-items: center;
       transition: all 0.5s ease 0s;
       position: relative;
       border: 7px solid $gray-3;
@@ -22,7 +17,7 @@
       &:nth-child(6),
       &:nth-child(7),
       &:nth-child(8) {
-        display: flex;
+        display: block;
       }
       &:hover .card-portfolio {
         transform: translateY(0);
@@ -159,5 +154,13 @@
   & a {
     color: $pink-1;
     cursor: pointer;
+  }
+}
+
+@include media(tablet) {
+  .filter-porfolio {
+    &.grid {
+      columns: 2;
+    }
   }
 }
